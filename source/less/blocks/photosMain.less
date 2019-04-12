@@ -1,0 +1,87 @@
+.wellcom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -30px;
+  background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 50% 100%, 50% 100%;
+  background-size: cover, auto;
+  min-height: 160px;
+}
+
+.photo-page__title {
+  display: block;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  margin: 40px 0 37px;
+}
+
+.photo-page__text {
+  display: block;
+  line-height: 24px;
+  text-align: center;
+  white-space: pre-line;
+  margin: 0 0 30px;
+}
+
+.photo {
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.photo img {
+  margin-bottom: 20px;
+}
+
+.photo__title {
+  display: block;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.photo__author {
+  text-transform: none;
+  line-height: 24px;
+  margin-bottom: 15px;
+}
+
+.photo__likes {
+  position: relative;
+  line-height: 24px;
+  padding-left: 30px;
+}
+
+.photo__likes::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/icon-like.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.video-page__title {
+  display: block;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.video-page__text {
+  display: block;
+  line-height: 24px;
+  text-align: center;
+  white-space: pre-line;
+  margin-bottom: 40px;
+}
