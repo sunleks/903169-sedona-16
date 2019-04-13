@@ -1,0 +1,42 @@
+.photo {
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.photo img {
+  margin-bottom: 20px;
+}
+
+.photo__title {
+  display: block;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.photo__author {
+  text-transform: none;
+  line-height: 24px;
+  margin-bottom: 15px;
+}
+
+.photo__likes {
+  position: relative;
+  line-height: 24px;
+  padding-left: 30px;
+}
+
+.photo__likes::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/icon-like.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
