@@ -5,7 +5,19 @@
 
 .page-header__logo {
   display: flex;
-  width: 100%;
   order: 1;
   justify-content: center;
+}
+
+@media(min-width: 768px) {
+  .page-header {
+    position: relative;
+    display: flex;
+  }
+  .page-header__logo {
+    display: block;
+    position: absolute;
+    left: calc(50% - 75px);
+    z-index: 1000;
+  }
 }
