@@ -70,8 +70,46 @@
   margin: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .things {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
+  }
+
+  .things__item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 33%;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .things__item-caption {
+    margin-top: 165px;
+  }
+
+  .things__item-caption--house::before {
+    top: -150px;
+    left: -10px;
+    width: 80px;
+    height: 80px;
+    background-size: 80px;
+  }
+
+  .things__item-caption--present::before {
+    top: -150px;
+    left: -10px;
+    width: 80px;
+    height: 100px;
+    background-size: 80px;
+  }
+
+  .things__item-caption--food::before {
+    top: -140px;
+    left: -10px;
+    width: 80px;
+    height: 80px;
+    background-size: 80px;
   }
 }

@@ -1,13 +1,13 @@
 .photo {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   padding-top: 25px;
   width: 280px;
   margin: 0 auto;
-}
-
-.photo img {
-  margin-bottom: 20px;
+  img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 .photo__title {
@@ -28,6 +28,8 @@
   position: relative;
   line-height: 24px;
   padding-left: 30px;
+  margin: auto 0;
+  margin-left: auto;
 }
 
 .photo__likes::before {
@@ -41,7 +43,7 @@
   background-position: 0 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .photo {
     width: 50%;
     .clearfix();
@@ -52,7 +54,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: @desktop-width) {
   .photo {
     width: 33%;
   }
