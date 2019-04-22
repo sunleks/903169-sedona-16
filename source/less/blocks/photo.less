@@ -1,13 +1,14 @@
 .photo {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   padding-top: 25px;
   width: 280px;
   margin: 0 auto;
-}
 
-.photo img {
-  margin-bottom: 20px;
+  img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 .photo__title {
@@ -28,6 +29,8 @@
   position: relative;
   line-height: 24px;
   padding-left: 30px;
+  margin: auto 0;
+  margin-left: auto;
 }
 
 .photo__likes::before {
@@ -39,4 +42,25 @@
   background-image: url("../img/icon-like.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+@media (min-width: @tablet-width) {
+  .photo {
+    width: 50%;
+    .clearfix();
+  }
+
+  .photo--size {
+    width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo {
+    width: 33%;
+  }
+
+  .photo--size {
+    width: 100%;
+  }
 }

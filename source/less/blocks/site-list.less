@@ -18,3 +18,30 @@
   right: 20px;
   top: 260px;
 }
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+    padding: 0 12px 0 12px;
+  }
+
+  .site-list li:nth-child(3) {
+    margin-left: auto;
+  }
+
+  .site-list__item {
+    border: none;
+  }
+
+  .site-list__item a {
+    color: #000000;
+    background-color: @white;
+    padding: 10px 32px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list__item a {
+    padding: 10px 80px;
+  }
+}

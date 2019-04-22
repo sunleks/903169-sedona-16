@@ -1,6 +1,6 @@
 body {
-  max-width: 320px;
-  margin: 0 auto;
+  min-width: 320px;
+  margin: 0;
   padding: 0;
   font-family: @font-family;
   font-size: 14px;
@@ -30,4 +30,21 @@ a {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.site-container {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .site-container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-container {
+    max-width: 1200px;
+  }
 }

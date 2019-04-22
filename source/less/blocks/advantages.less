@@ -45,8 +45,9 @@
 .advantages__item-caption--triangle {
   background: url("../img/bg-triangle.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: 50% 0;
   padding-top: 70px;
+  background-size: contain;
 }
 
 .advantages__item-number {
@@ -92,9 +93,50 @@
 
 .advantages__item-picture {
   display: block;
+  margin: 0 auto;
 }
 
 .advantages__list-things {
   padding: 38px 0;
   margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__list-reasons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .advantages__item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .advantages__container {
+    display: block;
+    width: 255px;
+    box-sizing: border-box;
+  }
+
+  .advantages__container-reverse {
+    order: 2;
+  }
+
+  .advantages__item-caption--triangle {
+    background: none;
+    padding-top: 45px;
+  }
+
+  .advantages__item-picture {
+    margin: 0;
+    padding: 0;
+  }
+
+  .advantages__item--size {
+    width: 33%;
+    margin: 0 auto;
+    justify-content: center;
+  }
 }
