@@ -12,7 +12,7 @@
   font-size: 14px;
   line-height: 24px;
   text-align: center;
-  padding: 0;
+  padding: 0 20px;
   margin: 0 0 37px;
 }
 
@@ -25,4 +25,45 @@
 .trip__map {
   display: block;
   margin-bottom: 50px;
+}
+
+.trip br {
+  display: none;
+}
+
+@media(min-width: @tablet-width) {
+  .trip__title {
+    font-size: 30px;
+    line-height: 26px;
+  }
+
+  .trip br {
+    display: block;
+  }
+
+  .trip__button {
+    width: 458px;
+    box-sizing: border-box;
+    margin: 0 auto 50px;
+  }
+
+  .trip__map {
+    width: 768px;
+  }
+
+  .trip__map-image {
+    width: 768px;
+    height: 350px;
+  }
+}
+
+@media(min-width: @desktop-width) {
+  .trip__map {
+    width: 1200px;
+  }
+
+  .trip__map-image {
+    width: 1200px;
+    height: 350px;
+  }
 }

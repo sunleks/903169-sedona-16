@@ -14,7 +14,29 @@
 }
 
 @media (min-width: @tablet-width) {
-  .video video {
-    width: 100%;
+  .video {
+    margin-bottom: 75px;
+  }
+
+  .video__title {
+    font-size: 30px;
+  }
+
+  .video__text {
+    width: 440px;
+    margin: 0 auto;
+  }
+
+  .video__content {
+    width: 648px;
+    text-align: center;
+    margin: 0 auto;
+    min-height: 500px;
+  }
+}
+
+@media(min-width: @desktop-width) {
+  .video__content {
+    width: 800px;
   }
 }

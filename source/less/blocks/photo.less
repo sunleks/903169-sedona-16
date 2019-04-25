@@ -3,12 +3,18 @@
   flex-wrap: wrap;
   padding-top: 25px;
   width: 280px;
-  margin: 0 auto;
+  padding: 25px 20px 0;
+  border-top: 1px solid #e5e5e5;
 
   img {
     width: 100%;
     margin-bottom: 20px;
   }
+}
+
+.photo__container {
+  width: 100%;
+  margin-bottom: 5px;
 }
 
 .photo__title {
@@ -29,8 +35,6 @@
   position: relative;
   line-height: 24px;
   padding-left: 30px;
-  margin: auto 0;
-  margin-left: auto;
 }
 
 .photo__likes::before {
@@ -48,19 +52,57 @@
   .photo {
     width: 50%;
     .clearfix();
+    border: none;
+    background-color: #eaeaea;
   }
 
   .photo--size {
     width: 100%;
+  }
+
+  .photo__container-elements {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .photo__container {
+    width: 50%;
+    margin: 0 0 0 20px;
+  }
+
+  .photo__likes {
+    margin: auto 25px auto auto;
   }
 }
 
 @media (min-width: @desktop-width) {
   .photo {
     width: 33%;
+    min-height: 270px;
   }
 
   .photo--size {
     width: 100%;
+    min-height: 400px;
+  }
+
+  .photo img {
+    margin: 0;
+  }
+
+  .photo__container-elements {
+    color: @white;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    min-height: 80px;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .photo__title {
+    padding-top: 20px;
+    margin-bottom: 0;
   }
 }
