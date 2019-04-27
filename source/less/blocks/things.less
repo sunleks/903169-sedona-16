@@ -4,11 +4,11 @@
 }
 
 .things__item {
-  margin-left: 70px;
+  margin-left: 51px;
 }
 
 .things li:not(:last-child) {
-  margin-bottom: 33px;
+  margin-bottom: 29px;
 }
 
 .things li:last-child {
@@ -22,7 +22,7 @@
   line-height: 26px;
   font-weight: 700;
   font-style: normal;
-  margin: 0 0 20px;
+  margin: 0 0 12px;
 }
 
 .things__item-caption--house::before {
@@ -83,7 +83,7 @@
 
   .things__item {
     display: block;
-    width: 33%;
+    width: 255px;
     .clearfix();
   }
 
@@ -97,12 +97,13 @@
 
   .things__item-caption {
     font-size: 21px;
-    margin-top: 165px;
+    margin-top: 121px;
+    margin-bottom: 20px;
     text-align: center;
   }
 
   .things__item-caption--house::before {
-    top: -150px;
+    top: -100px;
     left: calc(50% - 40px);
     width: 80px;
     height: 80px;
@@ -110,15 +111,15 @@
   }
 
   .things__item-caption--present::before {
-    top: -150px;
-    left: calc(50% - 40px);
+    top: -100px;
+    left: calc(50% - 30px);
     width: 80px;
     height: 100px;
-    background-size: 80px;
+    background-size: 62px;
   }
 
   .things__item-caption--food::before {
-    top: -140px;
+    top: -100px;
     left: calc(50% - 40px);
     width: 80px;
     height: 80px;
@@ -137,6 +138,14 @@
 }
 
 @media (min-width: @desktop-width) {
+  .advantages__list-things {
+    padding: 38px 0px 83px;
+  }
+
+  .things__item {
+    width: 400px;
+  }
+
   .things__item-text {
     width: 290px;
   }

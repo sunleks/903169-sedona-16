@@ -5,7 +5,7 @@
 
 .site-list__item a {
   display: block;
-  padding: 10px 0;
+  padding: 7px 0;
   text-align: center;
   color: @white;
   background-color: #81b3d2;
@@ -15,14 +15,14 @@
   position: absolute;
   text-indent: -1000px;
   overflow: hidden;
-  right: 20px;
-  top: 260px;
+  right: 17px;
+  top: 235px;
 }
 
 @media (min-width: @tablet-width) {
   .site-list {
     display: flex;
-    padding: 0 12px 0 12px;
+    flex-wrap: wrap;
   }
 
   .site-list li:nth-child(3) {
@@ -31,17 +31,22 @@
 
   .site-list__item {
     border: none;
+    width: 152px;
   }
 
   .site-list__item a {
     color: #000000;
     background-color: @white;
-    padding: 10px 32px;
+    padding: 6px 0;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .site-list__item {
+    width: 240px;
+  }
+
   .site-list__item a {
-    padding: 10px 80px;
+    padding: 8px 0;
   }
 }

@@ -2,18 +2,19 @@
   display: flex;
   flex-wrap: wrap;
   width: 280px;
-  padding: 25px 20px 0 20px;
+  padding: 22px 20px 0 20px;
   border-top: 1px solid #e5e5e5;
 
   img {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    min-height: 280px;
   }
 }
 
 .photo__container {
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 .photo__title {
@@ -21,7 +22,6 @@
   line-height: 24px;
   font-style: normal;
   font-weight: 700;
-  margin-bottom: 10px;
 }
 
 .photo__author {
@@ -31,20 +31,25 @@
 }
 
 .photo__likes {
-  position: relative;
   line-height: 24px;
-  padding-left: 30px;
+  display: flex;
 }
 
-.photo__likes::before {
-  content: "";
-  position: absolute;
-  left: 0;
+.photo__button {
+  border: none;
+  background-color: @white;
+  display: block;
+  text-indent: -1000px;
+  overflow: hidden;
   width: 30px;
   height: 30px;
   background-image: url("../img/icon-like.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.photo__likes-result {
+  margin-left: 7px;
 }
 
 @media (min-width: @tablet-width) {
@@ -55,7 +60,19 @@
     background-color: #eaeaea;
   }
 
+  .photo img {
+    margin: 0;
+    min-height: auto;
+    height: 267px;
+    width: 324px;
+  }
+
   .photo--size {
+    width: 100%;
+  }
+
+  .photo--size img {
+    min-height: 400px;
     width: 100%;
   }
 
@@ -66,12 +83,39 @@
   }
 
   .photo__container {
-    width: 50%;
+    width: 180px;
     margin: 0 0 0 20px;
   }
 
+  .photo__title {
+    display: block;
+    margin: 15px 0 0;
+  }
+
+  .photo__author {
+    display: block;
+    margin-bottom: 17px;
+  }
+
   .photo__likes {
-    margin: auto 25px auto auto;
+    display: flex;
+    margin: auto 0 auto auto;
+    width: 84px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .photo__button {
+    display: block;
+    background-color: inherit;
+    padding: 0;
+    background-position: 1px 3px;
+  }
+
+  .photo__likes-result {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
   }
 }
 
@@ -88,6 +132,7 @@
 
   .photo img {
     margin: 0;
+    width: 100%;
   }
 
   .photo__container-elements {
@@ -98,6 +143,10 @@
     min-height: 80px;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .photo__likes {
+    padding-top: 20px;
   }
 
   .photo__title {

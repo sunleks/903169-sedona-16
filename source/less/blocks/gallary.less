@@ -1,5 +1,5 @@
 .gallary {
-  margin-bottom: 65px;
+  margin-bottom: 33px;
 }
 
 .gallary__title {
@@ -8,14 +8,14 @@
   line-height: 26px;
   font-weight: 700;
   text-align: center;
-  margin: 40px 0 37px;
+  margin: 40px 0 24px;
 }
 
 .gallary__text {
   display: block;
   line-height: 24px;
   text-align: center;
-  margin: 0 0 30px;
+  margin: 0 0 27px;
   padding: 0 20px;
 }
 
@@ -26,12 +26,22 @@
 }
 
 .gallary__item {
-  margin-bottom: 17px;
+  margin-bottom: 11px;
 }
 
 @media (min-width: @tablet-width) {
+  .gallary {
+  margin-bottom: 66px;
+  }
+  .gallary__title {
+    font-size: 30px;
+    margin: 75px 0 30px;
+  }
+
   .gallary__wrapper {
     border: none;
+    width: 648px;
+    margin: 0 auto;
   }
 
   .gallary__text {
@@ -45,6 +55,14 @@
 }
 
 @media (min-width: @desktop-width) {
+  .gallary__title {
+    margin: 110px 0 30px;
+  }
+
+  .gallary__wrapper {
+    width: 1200px;
+  }
+
   .gallary__item {
     position: relative;
     flex-grow: 1;
