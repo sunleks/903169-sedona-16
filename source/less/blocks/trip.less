@@ -1,9 +1,13 @@
+.trip {
+  margin-bottom: 30px;
+}
+
 .trip__title {
   display: block;
   font-size: 21px;
   line-height: 26px;
   text-align: center;
-  margin: 32px 0 29px;
+  margin: 32px 0 20px;
   padding: 0;
 }
 
@@ -12,17 +16,74 @@
   font-size: 14px;
   line-height: 24px;
   text-align: center;
-  padding: 0;
-  margin: 0 0 37px;
+  padding: 0 20px;
+  margin: 0 0 35px;
 }
 
 .trip__button {
   padding: 15px 0;
-  margin: 0 25px 50px;
+  margin: 0 21px 50px;
   background-color: #81b3d2;
 }
 
 .trip__map {
   display: block;
-  margin-bottom: 50px;
+}
+
+.trip br {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .trip {
+    margin-bottom: 38px;
+  }
+
+  .trip__title {
+    font-size: 30px;
+    line-height: 26px;
+    margin: 53px 0 31px;
+  }
+
+  .trip__text {
+    margin: 0 0 43px;
+  }
+
+  .trip br {
+    display: block;
+  }
+
+  .trip__button {
+    width: 458px;
+    box-sizing: border-box;
+    margin: 0 auto 50px;
+  }
+
+  .trip__map {
+    width: 768px;
+  }
+
+  .trip__map-image {
+    width: 768px;
+    height: 350px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .trip {
+    margin-bottom: 43px;
+  }
+
+  .trip__text {
+    margin: 0 0 50px;
+  }
+
+  .trip__map {
+    width: 1200px;
+  }
+
+  .trip__map-image {
+    width: 1200px;
+    height: 350px;
+  }
 }

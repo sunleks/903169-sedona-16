@@ -4,11 +4,11 @@
 }
 
 .things__item {
-  margin-left: 70px;
+  margin-left: 51px;
 }
 
 .things li:not(:last-child) {
-  margin-bottom: 33px;
+  margin-bottom: 29px;
 }
 
 .things li:last-child {
@@ -22,7 +22,7 @@
   line-height: 26px;
   font-weight: 700;
   font-style: normal;
-  margin: 0 0 20px;
+  margin: 0 0 12px;
 }
 
 .things__item-caption--house::before {
@@ -41,7 +41,7 @@
 .things__item-caption--present::before {
   content: "";
   position: absolute;
-  top: -13px;
+  top: -20px;
   left: -50px;
   width: 40px;
   height: 50px;
@@ -54,7 +54,7 @@
 .things__item-caption--food::before {
   content: "";
   position: absolute;
-  top: -13px;
+  top: -6px;
   left: -50px;
   width: 40px;
   height: 40px;
@@ -70,6 +70,10 @@
   margin: 0;
 }
 
+.things__item-text br {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .things {
     display: flex;
@@ -78,38 +82,71 @@
   }
 
   .things__item {
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
     width: 33%;
-    justify-content: center;
-    margin-left: 0;
+    .clearfix();
+  }
+
+  .things li:nth-child(2) {
+    order: 3;
+  }
+
+  .things li:not(:last-child) {
+    margin-bottom: 0;
   }
 
   .things__item-caption {
-    margin-top: 165px;
+    font-size: 21px;
+    margin-top: 121px;
+    margin-bottom: 20px;
+    text-align: center;
   }
 
   .things__item-caption--house::before {
-    top: -150px;
-    left: -10px;
+    top: -100px;
+    left: calc(50% - 40px);
     width: 80px;
     height: 80px;
     background-size: 80px;
   }
 
   .things__item-caption--present::before {
-    top: -150px;
-    left: -10px;
+    top: -100px;
+    left: calc(50% - 30px);
     width: 80px;
     height: 100px;
-    background-size: 80px;
+    background-size: 62px;
   }
 
   .things__item-caption--food::before {
-    top: -140px;
-    left: -10px;
+    top: -100px;
+    left: calc(50% - 40px);
     width: 80px;
     height: 80px;
     background-size: 80px;
+  }
+
+  .things__item-text {
+    text-align: center;
+    width: 185px;
+    margin: 0 auto;
+  }
+
+  .things__item-text br {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__list-things {
+    padding: 38px 0 83px;
+  }
+
+  .things__item {
+    width: 33%;
+  }
+
+  .things__item-text {
+    width: 290px;
   }
 }
