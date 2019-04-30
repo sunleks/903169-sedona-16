@@ -2,12 +2,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -30px;
+  margin-top: -36px;
   background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: 50% 100%, 50% 100%;
   background-size: cover, auto;
   min-height: 159px;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@2x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 50% 100%, 50% 100%;
+    background-size: cover, cover;
+  }
 }
 
 .wellcom img {
@@ -20,6 +27,17 @@
     margin: 0;
     background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@1x.jpg");
     background-size: contain, auto;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@2x.jpg");
+      background-position: 50% 100%, 50% 100%;
+      background-size: contain, 768px;
+    }
+  }
+
+  .wellcom img {
+    margin-top: -18px;
+    width: 460px;
   }
 }
 
@@ -28,5 +46,11 @@
     min-height: 302px;
     background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@1x.jpg");
     background-size: contain, auto;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@2x.jpg");
+      background-position: 50% 100%, 50% 100%;
+      background-size: contain, 1200px;
+    }
   }
 }
