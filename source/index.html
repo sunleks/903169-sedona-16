@@ -11,7 +11,11 @@
     <div class="site-container">
       <header class="page-header">
         <a class="page-header__logo" href="index.html">
-          <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+            <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип">
+          </picture>
         </a>
         <nav class="main-nav">
           <div class="main-nav__wrapper">
@@ -42,7 +46,21 @@
                 <b class="advantages__item-number advantages__item-number--style">№1</b>
                 <p class="advantages__item-text advantages__item-text--style">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ&nbsp;СВОЯ ЖИЗНЬ</p>
               </div>
-              <img class="advantages__item-picture" src="img/main-city-mobile@1x.jpg" width="320" height="260" alt="photo city">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="img/main-city-desktop@2x.jpg 2x,
+                          img/main-city-desktop@1x.jpg 1x">
+                <source
+                  media="(min-width: 768px)"
+                  srcset="img/main-city-tablet@2x.jpg 2x,
+                          img/main-city-tablet@1x.jpg 1x">
+                <source
+                  media="(min-width: 320px)"
+                  srcset="img/main-city-mobile@2x.jpg 2x,
+                          img/main-city-mobile@1x.jpg 1x">
+                <img class="advantages__item-picture" src="img/main-city-mobile@1x.jpg"  alt="photo city">
+              </picture>
               <ul class="advantages__list-things things">
                 <li class="things__item">
                   <i class="things__item-caption things__item-caption--house">Жилье</i>
@@ -68,7 +86,21 @@
                 <p class="advantages__item-text advantages__item-text--style">Да, по нему можно пройти! <br> Если вы осмелитесь, конечно
                 </p>
               </div>
-              <img class="advantages__item-picture" src="img/main-bridge-mobile@1x.jpg" width="320" height="260" alt="photo bridge">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="img/main-bridge-desktop@2x.jpg 2x,
+                          img/main-bridge-desktop@1x.jpg 1x">
+                <source
+                  media="(min-width: 768px)"
+                  srcset="img/main-bridge-tablet@2x.jpg 2x,
+                          img/main-bridge-tablet@1x.jpg 1x">
+                <source
+                  media="(min-width: 320px)"
+                  srcset="img/main-bridge-mobile@2x.jpg 2x,
+                          img/main-bridge-mobile@1x.jpg 1x">
+                <img class="advantages__item-picture" src="img/main-bridge-mobile@1x.jpg" width="320" height="260" alt="photo bridge">
+              </picture>
             </li>
             <li class="advantages__item advantages__item--size">
               <div class="advantages__container-bottom">
@@ -104,7 +136,21 @@
           <p class="trip__text">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
           <a class="button trip__button" href="#">Найти гостиницу</a>
           <a class="trip__map" href="#">
-            <img class="trip__map-image" src="img/bg-map-mobile@1x.jpg" width="320" height="350" alt="Местоположение на карте">
+            <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="img/bg-map-desktop@2x.jpg 2x,
+                          img/bg-map-desktop@1x.jpg 1x">
+                <source
+                  media="(min-width: 768px)"
+                  srcset="img/bg-map-tablet@2x.jpg 2x,
+                          img/bg-map-tablet@1x.jpg 1x">
+                <source
+                  media="(min-width: 320px)"
+                  srcset="img/bg-map-mobile@2x.jpg 2x,
+                          img/bg-map-mobile@1x.jpg 1x">
+                <img class="trip__map-image" src="img/bg-map-mobile@1x.jpg" width="320" height="350" alt="Местоположение на карте">
+              </picture>
           </a>
         </section>
       </main>
