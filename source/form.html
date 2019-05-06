@@ -31,8 +31,108 @@
         </nav>
       </header>
       <main>
+        <section class="wellcom">
+          <img src="img/text-sedona.svg" width="230"  height="40" alt="Sedona">
+        </section>
+        <section class="feedback">
+          <h2 class="feedback__title">Оставьте свой отзыв</h2>
+          <p class="feedback__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          <form action="#" method="get" class="feedback__form">
+            <fieldset class="feedback__list about-you">
+              <legend class="about-you__title">Представьтесь:</legend>
+              <ul class="about-you__list-items">
+                <li class="about-you__items">
+                  <label for="name">ИМЯ*:</label>
+                  <input type="text" name="name" id="name" placeholder="Петр">
+                </li>
+                <li class="about-you__items">
+                  <label for="surname">ФАМИЛИЯ*:</label>
+                  <input type="text" name="surname" id="surname" placeholder="Иванов">
+                </li>
+                <li class="about-you__items">
+                  <label for="patronymic">ОТЧЕСТВО:</label>
+                  <input type="text" name="patronymic" id="patronymic" placeholder="Александрович">
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="feedback__list information">
+              <legend class="information__title">Контактная информация:</legend>
+              <ul class="information__list-items">
+                <li class="information__items">
+                  <label for="tel">Контактный телефон*:</label>
+                  <input type="tel" name="tel" id="tel" placeholder="Введите телефон">
+                  <a href="#" class="information__telephone"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="30" height="30"><path fill="#010101" d="M3.6 7.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.699-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V17c0 .6-.4 1-1 1C7.6 18 0 10.4 0 1c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1L3.6 7.8z"/></svg></a>
+                </li>
+                <li class="information__items">
+                  <label for="email">ЭЛЕКТРОННАЯ ПОЧТА*:</label>
+                  <input type="email" name="email" id="email" placeholder="Введите e-mail">
+                  <a href="#" class="information__mail"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M8 10c-.266 0-.5-.094-1-.336L0 6v7c0 .55.45 1 1 1h14c.55 0 1-.45 1-1V6L9 9.664c-.5.242-.734.336-1 .336zm7-8H1c-.55 0-1 .45-1 1v.758l8 4.205 8-4.205V3c0-.55-.45-1-1-1z"/></svg></a>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="feedback__list impression">
+              <legend class="impression__title">ВАШЕ ОБЩЕЕ ВПЕЧАТЛЕНИЕ:</legend>
+              <ul class="impression__list-items">
+                <li class="impression__items">
+                  <label for="good">Скорее положительное
+                  <input type="radio" class="visually-hidden" name="impression" value="good" id="good" checked>
+                  <span class="impression__radio"></span>
+                  </label>
+                </li>
+                <li class="impression__items">
+                  <label for="bad">Скорее отрицательное
+                  <input type="radio" class="visually-hidden" name="impression" value="bad" id="bad">
+                  <span class="impression__radio"></span>
+                  </label>
+                </li>
+                <li class="impression__items">
+                  <label for="сomplicate">Затрудняюсь ответить
+                  <input type="radio" class="visually-hidden" name="impression" value="сomplicate" id="сomplicate">
+                  <span class="impression__radio"></span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="feedback__list landmarks">
+              <legend class="landmarks__title">ПОСЕЩЁННЫЕ ДОСТОПРИМЕЧАТЕЛЬНОСТИ:</legend>
+              <ul class="landmarks__list-items">
+                <li class="landmarks__items">
+                  <label for="bridge">Мост Дъявола
+                  <input type="checkbox" class="visually-hidden" name="Мост Дъявола" tabindex id="bridge" checked>
+                  <span class="landmarks__checkbox"></span>
+                  </label>
+                </li class="landmarks__items">
+                <li class="landmarks__items">
+                  <label for="mount">Гора-Колокол
+                  <input type="checkbox" class="visually-hidden" name="Гора-Колокол" id="mount" checked>
+                  <span class="landmarks__checkbox"></span>
+                  </label>
+                </li>
+                <li class="landmarks__items">
+                  <label for="park">Слайд-парк
+                  <input type="checkbox" class="visually-hidden" name="Слайд-парк" id="park" checked>
+                  <span class="landmarks__checkbox"></span>
+                  </label>
+                </li>
+                <li class="landmarks__items">
+                  <label for="red-mount">Красные скалы
+                  <input type="checkbox" class="visually-hidden" name="Красные скалы" id="red-mount">
+                  <span class="landmarks__checkbox"></span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="feedback__list emotions">
+              <legend class="emotions__title">ОПИШИТЕ СВОИ ЭМОЦИИ:</legend>
+              <div class="emotions__comment">
+                <textarea name="emotions" id="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
+              </div>
+            </fieldset>
+            <button class="feedback__send button" type="submit">Отправить отзыв</button>
+          </form>
+        </section>
       </main>
-      <footer class="page-footer">
+       <footer class="page-footer">
         <a class="page-footer__visit" href="#">#VISITSEDONA</a>
         <div class="page-footer__social social">
           <ul class="social__list">
@@ -44,7 +144,7 @@
         <div class="page-footer__copyright copyright">
           <span class="copyright__text">Разработано</span>
           <a class="copyright__link" href="index.html">
-            <img src="img/htmlacademy.svg" width="50" height="50" alt="Логотип">
+            <img src="img/htmlacademy.svg" width="40" height="40" alt="Логотип">
           </a>
         </div>
       </footer>

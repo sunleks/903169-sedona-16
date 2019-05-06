@@ -1,0 +1,64 @@
+.emotions {
+  border: none;
+  padding: 0;
+  margin: 0 0 38px;
+}
+
+.emotions__title {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  width: 100%;
+  padding: 20px 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+.emotions__comment {
+  padding: 0 20px;
+  width: 100%;
+}
+
+.emotions__comment textarea {
+  resize: none;
+  width: 280px;
+  min-height: 160px;
+  border: none;
+  background-color: #f2f2f2;
+}
+
+.emotions textarea::placeholder {
+  padding-top: 10px;
+  padding-left: 20px;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  font-weight: 700;
+}
+
+@media (min-width: @tablet-width) {
+  .emotions {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .emotions__title {
+    font-size: 21px;
+    border: none;
+    margin-bottom: 35px;
+  }
+
+  .emotions__comment {
+    padding: 0;
+  }
+
+  .emotions__comment textarea {
+    width: 100%;
+    padding: 0;
+  }
+
+  .emotions textarea::placeholder {
+    padding-top: 15px;
+  }
+}

@@ -1,0 +1,94 @@
+.landmarks {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.landmarks__title {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  width: 100%;
+  padding: 20px 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+.landmarks__list-items {
+  text-transform: none;
+  list-style: none;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.landmarks__items {
+  display: flex;
+  align-items: center;
+  margin-bottom: 45px;
+}
+
+.landmarks__items:last-child {
+  margin-bottom: 40px;
+}
+
+.landmarks__items label {
+  position: relative;
+  color: #333333;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  padding-top: 9px;
+  padding-left: 79px;
+}
+
+.landmarks__checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 55px;
+  height: 56px;
+  background-color: #f2f2f2;
+}
+
+#bridge:checked + .landmarks__checkbox::before,
+#mount:checked + .landmarks__checkbox::before,
+#park:checked + .landmarks__checkbox::before,
+#red-mount:checked + .landmarks__checkbox::before {
+  position: absolute;
+  content:"";
+  width: 55px;
+  height: 56px;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: 17px 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .landmarks {
+    width: 100%;
+  }
+
+  .landmarks__title {
+    font-size: 21px;
+    border: none;
+    width: 300px;
+    margin: 0 auto 24px;
+  }
+
+  .landmarks__list-items {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 90px;
+    justify-content: space-between;
+  }
+
+  .landmarks__items {
+    min-width: 200px;
+    margin-bottom: 55px;
+  }
+
+  .landmarks__items:last-child {
+    margin-bottom: auto;
+  }
+}
