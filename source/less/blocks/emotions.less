@@ -41,12 +41,34 @@
   .emotions {
     width: 100%;
     margin-top: 10px;
+    margin-bottom: 55px;
   }
 
   .emotions__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 21px;
     border: none;
     margin-bottom: 35px;
+  }
+
+  .emotions__title::before,
+  .emotions__title::after {
+    content: " ";
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 10px;
+    height: 1px;
+    background-color: #000000;
+  }
+
+  .emotions__title::before {
+    margin-right: 70px;
+  }
+
+  .emotions__title::after {
+    margin-left: 70px;
   }
 
   .emotions__comment {
