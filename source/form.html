@@ -6,6 +6,11 @@
     <title>Отправка формы - Седона</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
     <div class="site-container">
@@ -32,14 +37,20 @@
       </header>
       <main>
         <section class="wellcom">
-          <img src="img/text-sedona.svg" width="230"  height="40" alt="Sedona">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/text-sedona.svg">
+            <source media="(min-width: 768px)" srcset="img/text-sedona.svg">
+            <source media="(min-width: 320px)" srcset="img/text-sedona-small.svg">
+            <img src="img/text-sedona.svg" width="240"  height="40" alt="Sedona">
+          </picture>
         </section>
         <section class="feedback">
           <h2 class="feedback__title">Оставьте свой отзыв</h2>
           <p class="feedback__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
           <form action="#" method="get" class="feedback__form">
             <fieldset class="feedback__list about-you">
-              <legend class="about-you__title">Представьтесь:</legend>
+              <legend class="visually-hidden">Представьтесь:</legend>
+              <h3 class="about-you__title">Представьтесь:</h3>
               <ul class="about-you__list-items">
                 <li class="about-you__items">
                   <label for="name">ИМЯ*:</label>
@@ -56,7 +67,8 @@
               </ul>
             </fieldset>
             <fieldset class="feedback__list information">
-              <legend class="information__title">Контактная информация:</legend>
+              <legend class="visually-hidden">Контактная информация:</legend>
+              <h3 class="information__title">Контактная информация:</h3>
               <ul class="information__list-items">
                 <li class="information__items">
                   <label for="tel"><b>Контактный</b> телефон*:</label>
@@ -71,7 +83,8 @@
               </ul>
             </fieldset>
             <fieldset class="feedback__list impression">
-              <legend class="impression__title">ВАШЕ ОБЩЕЕ ВПЕЧАТЛЕНИЕ:</legend>
+              <legend class="visually-hidden">ВАШЕ ОБЩЕЕ ВПЕЧАТЛЕНИЕ:</legend>
+              <h3 class="impression__title">ВАШЕ ОБЩЕЕ ВПЕЧАТЛЕНИЕ:</h3>
               <ul class="impression__list-items">
                 <li class="impression__items">
                   <label for="good">Скорее положительное
@@ -94,14 +107,15 @@
               </ul>
             </fieldset>
             <fieldset class="feedback__list landmarks">
-              <legend class="landmarks__title">ПОСЕЩЁННЫЕ <br>ДОСТОПРИМЕЧАТЕЛЬНОСТИ:</legend>
+              <legend class="visually-hidden">ПОСЕЩЁННЫЕ <br>ДОСТОПРИМЕЧАТЕЛЬНОСТИ:</legend>
+              <h3 class="landmarks__title">ПОСЕЩЁННЫЕ <br>ДОСТОПРИМЕЧАТЕЛЬНОСТИ:</h3>
               <ul class="landmarks__list-items">
                 <li class="landmarks__items">
                   <label for="bridge">Мост Дъявола
-                  <input type="checkbox" class="visually-hidden bridge" name="Мост Дъявола" tabindex id="bridge" checked>
+                  <input type="checkbox" class="visually-hidden bridge" name="Мост Дъявола" id="bridge" checked>
                   <span class="landmarks__checkbox"></span>
                   </label>
-                </li class="landmarks__items">
+                </li>
                 <li class="landmarks__items">
                   <label for="mount">Гора-Колокол
                   <input type="checkbox" class="visually-hidden mount" name="Гора-Колокол" id="mount" checked>
@@ -123,7 +137,8 @@
               </ul>
             </fieldset>
             <fieldset class="feedback__list emotions">
-              <legend class="emotions__title">ОПИШИТЕ СВОИ ЭМОЦИИ:</legend>
+              <legend class="visually-hidden">ОПИШИТЕ СВОИ ЭМОЦИИ:</legend>
+              <h3 class="emotions__title">ОПИШИТЕ СВОИ ЭМОЦИИ:</h3>
               <div class="emotions__comment">
                 <textarea name="emotions" id="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
               </div>
@@ -138,8 +153,8 @@
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__list-item"><a href="#" class="social__tw"><span class="visually-hidden">Twitter</span></a></li>
-            <li class="social__list-item"><a href="#" class="social__fb"><span class="visually-hidden">Фейсбук</a></span></li>
-            <li class="social__list-item"><a href="#" class="social__yt"><span class="visually-hidden">YouTube</a></span></li>
+            <li class="social__list-item"><a href="#" class="social__fb"><span class="visually-hidden">Фейсбук</span></a></li>
+            <li class="social__list-item"><a href="#" class="social__yt"><span class="visually-hidden">YouTube</span></a></li>
           </ul>
         </div>
         <div class="page-footer__copyright copyright">

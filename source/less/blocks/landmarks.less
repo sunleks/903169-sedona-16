@@ -112,6 +112,12 @@
   .landmarks__items:last-child {
     margin-bottom: auto;
   }
+
+  _:-ms-fullscreen, :root {
+    .landmarks__items:last-child {
+      margin-bottom: 55px;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -130,5 +136,17 @@
 
   .landmarks__items:not(:last-child) {
     margin-right: 70px;
+  }
+
+  @supports (-ms-ime-align:auto) {
+    .landmarks__items:not(:last-child) {
+      margin-right: 69px;
+    }
+  }
+
+  _:-ms-fullscreen, :root {
+    .landmarks__items:not(:last-child) {
+      margin-right: 69px;
+    }
   }
 }

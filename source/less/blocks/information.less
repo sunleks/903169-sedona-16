@@ -45,6 +45,12 @@
   width: 79%;
 }
 
+@-moz-document url-prefix() {
+  .information__items input {
+    width: calc(79% - 24px);
+  }
+}
+
 .information__telephone {
   position: relative;
   display: block;
@@ -80,9 +86,18 @@
   font-weight: 700;
 }
 
+@-moz-document url-prefix() {
+  .information__items input[placeholder="Введите телефон"],
+  .information__items input[placeholder="Введите e-mail"] {
+    padding-left: 24px;
+    color: #000000;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .information {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     order: -2;
     margin-top: 50px;
@@ -107,6 +122,25 @@
     background-color: #000000;
   }
 
+  @-moz-document url-prefix() {
+    .information__title {
+      display: flex;
+      width: 100%;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .information__title::before {
+      content: "";
+      flex-grow: 1;
+      flex-shrink: 0;
+      width: 10px;
+      height: 1px;
+      background-color: #000000;
+    }
+  }
+
   .information__title::before {
     margin-right: 60px;
   }
@@ -117,6 +151,7 @@
 
   .information__list-items {
     padding: 0;
+    width: 100%;
   }
 
   .information__items {
@@ -126,6 +161,18 @@
   .information__items input {
     margin-top: 10px;
     width: 91%;
+  }
+
+  @-moz-document url-prefix() {
+    .information__items input {
+      width: calc(91% - 24px);
+    }
+  }
+
+  _:-ms-fullscreen, :root {
+    .information__items input {
+      width: calc(91% - 24px);
+    }
   }
 
   .information__telephone,
@@ -158,6 +205,12 @@
     box-sizing: border-box;
   }
 
+  _:-ms-fullscreen, :root {
+    .information__items {
+      margin-bottom: 0;
+    }
+  }
+
   .information__items:last-child {
     margin-bottom: auto;
   }
@@ -178,13 +231,55 @@
     margin-right: 15px;
   }
 
+  @supports (-ms-ime-align:auto) {
+    .information__items:nth-child(2) label {
+      width: 31.5%;
+    }
+  }
+
+  _:-ms-fullscreen, :root {
+    .information__items:nth-child(2) label {
+      width: 31.5%;
+    }
+  }
+
   .information__items input {
     display: block;
     width: 65.5%;
   }
 
+  @-moz-document url-prefix() {
+    .information__items input {
+      width: calc(65.5% - 24px);
+    }
+  }
+
+  _:-ms-fullscreen, :root {
+    .information__items input {
+      width: calc(65.5% - 24px);
+    }
+  }
+
   .information__items:nth-child(2) input {
-    width: calc(55% - 15px);
+    width: calc(57.5% - 15px);
+  }
+
+  @supports (-ms-ime-align:auto) {
+    .information__items:nth-child(2) input {
+      width: calc(56.5% - 15px);
+    }
+  }
+
+  @-moz-document url-prefix() {
+    .information__items:nth-child(2) input {
+      width: calc(57.5% - 24px - 15px);
+    }
+  }
+
+  _:-ms-fullscreen, :root {
+    .information__items:nth-child(2) input {
+      width: calc(56.5% - 24px - 15px);
+    }
   }
 
   .information__telephone {

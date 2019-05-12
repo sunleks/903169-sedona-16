@@ -22,6 +22,12 @@
   background-color: @white;
 }
 
+_:-ms-fullscreen, :root {
+  .main-nav .button-close {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
 .button-close::before {
   transform: rotate(45deg);
 }

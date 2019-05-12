@@ -52,6 +52,15 @@
   font-weight: 700;
 }
 
+@-moz-document url-prefix() {
+  .about-you__items input[placeholder="Петр"],
+  .about-you__items input[placeholder="Иванов"],
+  .about-you__items input[placeholder="Александрович"] {
+    padding-left: 20px;
+    color: #000000;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .about-you {
     width: 50%;

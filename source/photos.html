@@ -6,6 +6,11 @@
     <title>Отправка формы - Седона</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
     <div class="site-container">
@@ -32,7 +37,12 @@
       </header>
       <main class="page-main">
         <section class="wellcom">
-          <img src="img/text-sedona.svg" width="230"  height="40" alt="Sedona">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/text-sedona.svg">
+            <source media="(min-width: 768px)" srcset="img/text-sedona.svg">
+            <source media="(min-width: 320px)" srcset="img/text-sedona-small.svg">
+            <img src="img/text-sedona.svg" width="240"  height="40" alt="Sedona">
+          </picture>
         </section>
         <section class="gallary">
           <h2 class="gallary__title">Фото и видео</h2>
@@ -183,8 +193,8 @@
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__list-item"><a href="#" class="social__tw"><span class="visually-hidden">Twitter</span></a></li>
-            <li class="social__list-item"><a href="#" class="social__fb"><span class="visually-hidden">Фейсбук</a></span></li>
-            <li class="social__list-item"><a href="#" class="social__yt"><span class="visually-hidden">YouTube</a></span></li>
+            <li class="social__list-item"><a href="#" class="social__fb"><span class="visually-hidden">Фейсбук</span></a></li>
+            <li class="social__list-item"><a href="#" class="social__yt"><span class="visually-hidden">YouTube</span></a></li>
           </ul>
         </div>
         <div class="page-footer__copyright copyright">

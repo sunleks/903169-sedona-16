@@ -16,6 +16,12 @@
   }
 }
 
+_:-ms-fullscreen, :root .greeting img {
+  margin-top: 70px;
+  max-width: none;
+  height: 210px;
+}
+
 @media (min-width: @tablet-width) {
   .greeting {
     min-height: 518px;
@@ -33,6 +39,12 @@
   .greeting img {
     width: 465px;
     margin: 0 0 10px 2px;
+  }
+
+  _:-ms-fullscreen, :root .greeting img {
+    max-width: 100%;
+    height: auto;
+    width: 465px;
   }
 }
 

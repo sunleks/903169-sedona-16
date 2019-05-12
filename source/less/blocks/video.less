@@ -63,6 +63,10 @@
   background-color: @white;
 }
 
+_:-ms-fullscreen, :root .video__scale::after {
+  top: calc(50% - 5px);
+}
+
 .video__controls {
   display: flex;
   width: 280px;
@@ -118,6 +122,10 @@
     top: -93px;
   }
 
+  _:-ms-fullscreen, :root .video__scale {
+    left: 0;
+  }
+
   .video__scale::before {
     width: 395px;
     margin-left: 94px;
@@ -133,6 +141,10 @@
     background-color: inherit;
     width: 648px;
     height: 93px;
+  }
+
+  _:-ms-fullscreen, :root .video__controls {
+    left: 0;
   }
 
   .video__replay svg {

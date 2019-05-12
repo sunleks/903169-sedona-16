@@ -20,12 +20,24 @@
   width: 100%;
 }
 
+@-moz-document url-prefix() {
+  .emotions__comment {
+    max-width: 280px;
+  }
+}
+
 .emotions__comment textarea {
   resize: none;
   width: 280px;
   min-height: 160px;
   border: none;
   background-color: #f2f2f2;
+}
+
+@-moz-document url-prefix() {
+  .emotions__comment textarea {
+    width: calc(100% - 20px);
+  }
 }
 
 .emotions textarea::placeholder {
@@ -35,6 +47,12 @@
   line-height: 26px;
   color: #000000;
   font-weight: 700;
+}
+
+@-moz-document url-prefix() {
+  .emotions textarea[placeholder="Опишите подробно все свои восторги"] {
+    padding-left: 19px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -75,9 +93,21 @@
     padding: 0;
   }
 
+  @-moz-document url-prefix() {
+    .emotions__comment {
+      max-width: 100%;
+    }
+  }
+
   .emotions__comment textarea {
     width: 100%;
     padding: 0;
+  }
+
+  @-moz-document url-prefix() {
+    .emotions__comment textarea {
+      width: calc(100% - 19px);
+    }
   }
 
   .emotions textarea::placeholder {
