@@ -11,7 +11,8 @@
   font-size: 18px;
   line-height: 26px;
   width: 100%;
-  padding: 20px 0;
+  padding: 17px 0 20px;
+  margin: 0;
   border-top: 1px solid #e5e5e5;
 }
 
@@ -54,10 +55,17 @@
   background-position: 0 0;
 }
 
+.impression__radio:hover {
+  background-image: url("../img/icon-map-markeroff-hover.svg");
+}
 
-.good:checked + .impression__radio::before,
-.bad:checked + .impression__radio::before,
-.сomplicate:checked + .impression__radio::before {
+.impression__radio:active {
+  background-image: url("../img/icon-map-markeroff-active.svg");
+}
+
+.impression__good:checked + .impression__radio::before,
+.impression__bad:checked + .impression__radio::before,
+.impression__сomplicate:checked + .impression__radio::before {
   position: absolute;
   content: "";
   top: 0;
@@ -67,6 +75,18 @@
   background-image: url("../img/icon-map-makerblack.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.impression__good:checked + .impression__radio:hover::before,
+.impression__bad:checked + .impression__radio:hover::before,
+.impression__сomplicate:checked + .impression__radio:hover::before {
+  background-image: url("../img/icon-map-makerblack-hover.svg");
+}
+
+.impression__good:checked + .impression__radio:active::before,
+.impression__bad:checked + .impression__radio:active::before,
+.impression__сomplicate:checked + .impression__radio:active::before {
+  background-image: url("../img/icon-map-makerblack-active.svg");
 }
 
 @media (min-width: @tablet-width) {

@@ -1,7 +1,7 @@
 .emotions {
   border: none;
   padding: 0;
-  margin: 0 0 38px;
+  margin: 0 0 44px;
 }
 
 .emotions__title {
@@ -11,19 +11,14 @@
   font-size: 18px;
   line-height: 26px;
   width: 100%;
-  padding: 20px 0;
+  padding: 20px 0 20px;
   border-top: 1px solid #e5e5e5;
+  margin: 0;
 }
 
 .emotions__comment {
   padding: 0 20px;
-  width: 100%;
-}
-
-@-moz-document url-prefix() {
-  .emotions__comment {
-    max-width: 280px;
-  }
+  width: 280px;
 }
 
 .emotions__comment textarea {
@@ -32,28 +27,32 @@
   min-height: 160px;
   border: none;
   background-color: #f2f2f2;
+  box-sizing: border-box;
 }
 
-@-moz-document url-prefix() {
-  .emotions__comment textarea {
-    width: calc(100% - 20px);
-  }
+.emotions__comment textarea:hover {
+  background-color: #e5e5e5;
 }
 
-.emotions textarea::placeholder {
-  padding-top: 10px;
+.emotions__comment textarea:active {
+  background-color: @white;
+  box-shadow: inset 0px 0px 0px 4px #f2f2f2;
+}
+
+.emotions textarea[placeholder="Опишите подробно все свои восторги"] {
+  font-family: @font-family;
+  padding-top: 15px;
   padding-left: 20px;
   font-size: 18px;
   line-height: 26px;
-  color: #000000;
   font-weight: 700;
 }
 
-@-moz-document url-prefix() {
-  .emotions textarea[placeholder="Опишите подробно все свои восторги"] {
-    padding-left: 19px;
-  }
+.emotions textarea::placeholder {
+  color: #000000;
+  opacity: 1;
 }
+
 
 @media (min-width: @tablet-width) {
   .emotions {
@@ -90,27 +89,38 @@
   }
 
   .emotions__comment {
+    width: 648px;
     padding: 0;
-  }
-
-  @-moz-document url-prefix() {
-    .emotions__comment {
-      max-width: 100%;
-    }
   }
 
   .emotions__comment textarea {
-    width: 100%;
-    padding: 0;
+    width: 648px;
+    box-sizing: border-box;
   }
 
-  @-moz-document url-prefix() {
-    .emotions__comment textarea {
-      width: calc(100% - 19px);
-    }
+  .emotions textarea[placeholder="Опишите подробно все свои восторги"] {
+    padding-top: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .emotions {
+    margin-top: 8px;
   }
 
-  .emotions textarea::placeholder {
-    padding-top: 15px;
+  .emotions__title {
+    margin-top: 0;
+  }
+
+  .emotions__comment {
+    width: 960px;
+  }
+
+  .emotions__comment textarea {
+    width: 960px;
+  }
+
+  .emotions textarea[placeholder="Опишите подробно все свои восторги"] {
+    padding-top: 16px;
   }
 }

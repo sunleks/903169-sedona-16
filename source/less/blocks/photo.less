@@ -107,13 +107,9 @@
 
   .photo__button {
     display: block;
-    background-color: inherit;
+    background-color: rgba(0, 0, 0, 0);
     padding: 0;
     background-position: 1px 3px;
-  }
-
-  _:-ms-fullscreen, :root .photo__button {
-    background-color: rgba(0, 0, 0, 0);
   }
 
   .photo__likes-result {
@@ -151,11 +147,8 @@
     width: 100%;
     min-height: 80px;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-
-  _:-ms-fullscreen, :root .photo__container-elements {
     left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
   }
 
   .photo__likes {
@@ -165,5 +158,9 @@
   .photo__title {
     padding-top: 20px;
     margin: 0;
+  }
+
+  .photo__button {
+    background-image: url(../img/icon-like-white.svg);
   }
 }

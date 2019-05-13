@@ -11,12 +11,21 @@
   background-color: #81b3d2;
 }
 
+.site-list__item:hover a {
+  background-color: #669ec0;
+}
+
+.site-list__item:active a {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
+}
+
 .main-nav__toggle {
   position: absolute;
   text-indent: -1000px;
   overflow: hidden;
   right: 17px;
-  top: 235px;
+  bottom: -41px;
 }
 
 @media (min-width: @tablet-width) {
@@ -38,6 +47,15 @@
     color: #000000;
     background-color: @white;
     padding: 6px 0;
+  }
+
+  .site-list__item:hover a {
+    background-color: @white;
+    color: #81b3d2;
+  }
+
+  .site-list__item:active a {
+    color: rgba(0, 0, 0, 0.3);
   }
 }
 

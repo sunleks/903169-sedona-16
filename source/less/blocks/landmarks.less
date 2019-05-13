@@ -11,8 +11,9 @@
   font-size: 18px;
   line-height: 26px;
   width: 100%;
-  padding: 20px 0;
+  padding: 17px 0 20px;
   border-top: 1px solid #e5e5e5;
+  margin: 0;
 }
 
 .landmarks__list-items {
@@ -51,10 +52,18 @@
   background-color: #f2f2f2;
 }
 
-.bridge:checked + .landmarks__checkbox::before,
-.mount:checked + .landmarks__checkbox::before,
-.park:checked + .landmarks__checkbox::before,
-.red-mount:checked + .landmarks__checkbox::before {
+.landmarks__checkbox:hover {
+  background-color: #e5e5e5;
+}
+
+.landmarks__checkbox:active {
+  background-color: #d5d5d5;
+}
+
+.landmarks__bridge:checked + .landmarks__checkbox::before,
+.landmarks__mount:checked + .landmarks__checkbox::before,
+.landmarks__park:checked + .landmarks__checkbox::before,
+.landmarks__red-mount:checked + .landmarks__checkbox::before {
   position: absolute;
   content: "";
   width: 55px;
@@ -62,6 +71,13 @@
   background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: 17px 20px;
+}
+
+.landmarks__bridge:checked + .landmarks__checkbox:active::before,
+.landmarks__mount:checked + .landmarks__checkbox:active::before,
+.landmarks__park:checked + .landmarks__checkbox:active::before,
+.landmarks__red-mount:checked + .landmarks__checkbox:active::before {
+  background-image: url("../img/icon-tick-active.svg");
 }
 
 @media (min-width: @tablet-width) {
@@ -76,6 +92,7 @@
     font-size: 21px;
     border: none;
     width: 100%;
+    padding: 20px 0 22px;
     margin: 0 auto 24px;
   }
 
@@ -110,13 +127,7 @@
   }
 
   .landmarks__items:last-child {
-    margin-bottom: auto;
-  }
-
-  _:-ms-fullscreen, :root {
-    .landmarks__items:last-child {
-      margin-bottom: 55px;
-    }
+    margin-bottom: 55px;
   }
 }
 
@@ -135,18 +146,10 @@
   }
 
   .landmarks__items:not(:last-child) {
-    margin-right: 70px;
+    margin-right: 69px;
   }
 
-  @supports (-ms-ime-align:auto) {
-    .landmarks__items:not(:last-child) {
-      margin-right: 69px;
-    }
-  }
-
-  _:-ms-fullscreen, :root {
-    .landmarks__items:not(:last-child) {
-      margin-right: 69px;
-    }
+  .landmarks__items label {
+    padding-top: 16px;
   }
 }

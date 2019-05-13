@@ -13,6 +13,7 @@
   width: 100%;
   padding: 20px 0;
   border-top: 1px solid #e5e5e5;
+  margin: 0;
 }
 
 .information__list-items {
@@ -41,14 +42,18 @@
 .information__items input {
   border: none;
   background-color: #f2f2f2;
-  padding: 21px 0;
+  padding: 17px 0;
   width: 79%;
+  box-sizing: border-box;
 }
 
-@-moz-document url-prefix() {
-  .information__items input {
-    width: calc(79% - 24px);
-  }
+.information__items input:hover {
+  background-color: #e5e5e5;
+}
+
+.information__items input:active {
+  background-color: @white;
+  box-shadow: inset 0px 0px 0px 4px #f2f2f2;
 }
 
 .information__telephone {
@@ -78,7 +83,9 @@
   font-weight: 400;
 }
 
-.information__items input::placeholder {
+.information__items input[placeholder="Введите телефон"],
+.information__items input[placeholder="Введите e-mail"] {
+  font-family: @font-family;
   padding-left: 24px;
   font-size: 18px;
   line-height: 26px;
@@ -86,13 +93,11 @@
   font-weight: 700;
 }
 
-@-moz-document url-prefix() {
-  .information__items input[placeholder="Введите телефон"],
-  .information__items input[placeholder="Введите e-mail"] {
-    padding-left: 24px;
-    color: #000000;
-  }
+.information__items input::placeholder {
+  color: #000000;
+  opacity: 1;
 }
+
 
 @media (min-width: @tablet-width) {
   .information {
@@ -109,6 +114,8 @@
     align-items: center;
     font-size: 21px;
     border: none;
+    width: 100%;
+    margin: 0 auto;
     margin-bottom: 6px;
   }
 
@@ -120,25 +127,6 @@
     width: 10px;
     height: 1px;
     background-color: #000000;
-  }
-
-  @-moz-document url-prefix() {
-    .information__title {
-      display: flex;
-      width: 100%;
-      margin: 0 auto;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .information__title::before {
-      content: "";
-      flex-grow: 1;
-      flex-shrink: 0;
-      width: 10px;
-      height: 1px;
-      background-color: #000000;
-    }
   }
 
   .information__title::before {
@@ -159,38 +147,26 @@
   }
 
   .information__items input {
-    margin-top: 10px;
+    margin-top: 6px;
     width: 91%;
-  }
-
-  @-moz-document url-prefix() {
-    .information__items input {
-      width: calc(91% - 24px);
-    }
-  }
-
-  _:-ms-fullscreen, :root {
-    .information__items input {
-      width: calc(91% - 24px);
-    }
+    box-sizing: border-box;
   }
 
   .information__telephone,
   .information__mail {
-    margin-top: 10px;
     width: 9%;
   }
 
   .information__telephone svg,
   .information__mail svg {
     left: 23px;
-    top: 17px;
+    top: 23px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .information__title {
-    margin-bottom: 48px;
+    margin-bottom: 50px;
   }
 
   .information__list-items {
@@ -203,91 +179,35 @@
     display: flex;
     width: 400px;
     box-sizing: border-box;
-  }
-
-  _:-ms-fullscreen, :root {
-    .information__items {
-      margin-bottom: 0;
-    }
-  }
-
-  .information__items:last-child {
-    margin-bottom: auto;
+    margin-bottom: 20px;
   }
 
   .information__items:nth-child(2) {
     width: 480px;
-    justify-content: space-between;
+    margin-bottom: 20px;
   }
 
   .information__items label {
     display: block;
     padding: 0;
-    width: 20%;
-  }
-
-  .information__items:nth-child(2) label {
-    width: 30.5%;
-    margin-right: 15px;
-  }
-
-  @supports (-ms-ime-align:auto) {
-    .information__items:nth-child(2) label {
-      width: 31.5%;
-    }
-  }
-
-  _:-ms-fullscreen, :root {
-    .information__items:nth-child(2) label {
-      width: 31.5%;
-    }
+    padding-right: 14px;
   }
 
   .information__items input {
-    display: block;
-    width: 65.5%;
+    width: 258px;
+    margin: 0;
   }
 
-  @-moz-document url-prefix() {
-    .information__items input {
-      width: calc(65.5% - 24px);
-    }
-  }
-
-  _:-ms-fullscreen, :root {
-    .information__items input {
-      width: calc(65.5% - 24px);
-    }
-  }
-
-  .information__items:nth-child(2) input {
-    width: calc(57.5% - 15px);
-  }
-
-  @supports (-ms-ime-align:auto) {
-    .information__items:nth-child(2) input {
-      width: calc(56.5% - 15px);
-    }
-  }
-
-  @-moz-document url-prefix() {
-    .information__items:nth-child(2) input {
-      width: calc(57.5% - 24px - 15px);
-    }
-  }
-
-  _:-ms-fullscreen, :root {
-    .information__items:nth-child(2) input {
-      width: calc(56.5% - 24px - 15px);
-    }
-  }
-
-  .information__telephone {
-    width: 14.5%;
-  }
-
+  .information__telephone,
   .information__mail {
-    width: 12%;
+    width: 58px;
+    margin: 0;
+  }
+
+  .information__telephone svg,
+  .information__mail svg {
+    left: 23px;
+    top: 22px;
   }
 
   .information__items b {

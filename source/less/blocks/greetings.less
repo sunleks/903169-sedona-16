@@ -1,7 +1,6 @@
 .greeting {
   display: flex;
   justify-content: center;
-  align-items: center;
   min-height: 390px;
   background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
@@ -16,7 +15,7 @@
   }
 }
 
-_:-ms-fullscreen, :root .greeting img {
+.greeting img {
   margin-top: 70px;
   max-width: none;
   height: 210px;
@@ -37,14 +36,10 @@ _:-ms-fullscreen, :root .greeting img {
   }
 
   .greeting img {
-    width: 465px;
-    margin: 0 0 10px 2px;
-  }
-
-  _:-ms-fullscreen, :root .greeting img {
     max-width: 100%;
     height: auto;
     width: 465px;
+    margin: 80px 0 10px 2px;
   }
 }
 

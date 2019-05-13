@@ -56,6 +56,7 @@
   content: "";
   position: absolute;
   left: 57px;
+  top: 17px;
   display: block;
   width: 10px;
   height: 10px;
@@ -63,9 +64,6 @@
   background-color: @white;
 }
 
-_:-ms-fullscreen, :root .video__scale::after {
-  top: calc(50% - 5px);
-}
 
 .video__controls {
   display: flex;
@@ -92,6 +90,23 @@ _:-ms-fullscreen, :root .video__scale::after {
 
 .video__subtitles svg {
   padding-left: 30px;
+}
+.video__replay svg,
+.video__subtitles svg,
+.video__full-screen svg {
+  fill: #5c6870;
+}
+
+.video__replay svg:hover,
+.video__subtitles svg:hover,
+.video__full-screen svg:hover {
+  fill: #333333;
+}
+
+.video__replay svg:active,
+.video__subtitles svg:active,
+.video__full-screen svg:active {
+  fill: #b8b8b8;
 }
 
 @media (min-width: @tablet-width) {
@@ -120,10 +135,7 @@ _:-ms-fullscreen, :root .video__scale::after {
     justify-content: flex-start;
     height: 93px;
     top: -93px;
-  }
-
-  _:-ms-fullscreen, :root .video__scale {
-    left: 0;
+    left: 60px;
   }
 
   .video__scale::before {
@@ -133,18 +145,16 @@ _:-ms-fullscreen, :root .video__scale::after {
 
   .video__scale::after {
     left: 210px;
+    top: 41px;
   }
 
   .video__controls {
     position: absolute;
     top: -93px;
+    left: 60px;
     background-color: inherit;
     width: 648px;
     height: 93px;
-  }
-
-  _:-ms-fullscreen, :root .video__controls {
-    left: 0;
   }
 
   .video__replay svg {
@@ -163,6 +173,18 @@ _:-ms-fullscreen, :root .video__scale::after {
   .video__subtitles svg,
   .video__full-screen svg {
     fill: #ffffff;
+  }
+
+  .video__replay svg:hover,
+  .video__subtitles svg:hover,
+  .video__full-screen svg:hover {
+    fill: #c2c2c2;
+  }
+
+  .video__replay svg:active,
+  .video__subtitles svg:active,
+  .video__full-screen svg:active {
+    fill: #949494;
   }
 }
 
@@ -185,6 +207,7 @@ _:-ms-fullscreen, :root .video__scale::after {
   }
 
   .video__scale {
+    left: 0;
     width: 800px;
   }
 
@@ -193,6 +216,7 @@ _:-ms-fullscreen, :root .video__scale::after {
   }
 
   .video__controls {
+    left: 0;
     width: 800px;
   }
 
