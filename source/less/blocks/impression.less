@@ -54,6 +54,11 @@
   background-repeat: no-repeat;
   background-position: 0 0;
 }
+.impression__good:focus + .impression__radio,
+.impression__bad:focus + .impression__radio,
+.impression__сomplicate:focus + .impression__radio {
+  outline: 1px solid blue;
+}
 
 .impression__radio:hover {
   background-image: url("../img/icon-map-markeroff-hover.svg");
