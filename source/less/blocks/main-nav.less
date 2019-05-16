@@ -11,6 +11,18 @@
   .clearfix();
 }
 
+.main-nav .button-close {
+  display: none;
+  position: absolute;
+  top: 9px;
+  right: 12px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+}
+
 .main-nav--closed .site-list__item {
   display: none;
 }
@@ -29,17 +41,6 @@
 
 .main-nav--opened .site-list__item {
   display: block;
-}
-
-.main-nav .button-close {
-  position: absolute;
-  top: 9px;
-  right: 12px;
-  border: none;
-  background-color: rgba(0, 0, 0, 0);
-  font-size: 0;
-  width: 40px;
-  height: 40px;
 }
 
 @media (min-width: @tablet-width) {
