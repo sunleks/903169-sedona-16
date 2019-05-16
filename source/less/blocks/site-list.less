@@ -35,11 +35,17 @@
   }
 
   .site-list li:nth-child(3) {
-    margin-left: 160px;
+    margin-left: auto;
   }
 
-  .site-list li:nth-child(7) {
-    margin-left: 160px;
+  .site-list li:nth-child(n + 5) {
+    position: relative;
+    z-index: 1001;
+    width: calc(100% / 4);
+  }
+
+  .site-list li:nth-child(n + 5) a {
+    background-color: rgba(0, 0, 0, 0);
   }
 
   .site-list__item {
@@ -66,14 +72,6 @@
 @media (min-width: @desktop-width) {
   .site-list__item {
     width: 240px;
-  }
-
-  .site-list li:nth-child(3) {
-    margin-left: 240px;
-  }
-
-  .site-list li:nth-child(7) {
-    margin-left: 240px;
   }
 
   .site-list__item a {
